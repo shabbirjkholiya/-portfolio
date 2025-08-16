@@ -46,7 +46,15 @@
     @media (max-width: 768px) {
       .hero-image { max-width: 80%; margin: 0 auto; }
       .btn { width: 100%; margin-bottom: 1rem; }
+      .hero-text { margin-top: 1.5rem; } /* Adjust "Hello, I'm" position */
     }
+    @media (max-width: 768px) {
+    .hero-image {
+        max-width: 70%;
+        margin: 39px auto;
+    }
+}
+
   </style>
 </head>
 <body>
@@ -77,8 +85,8 @@
   <!-- Hero Section -->
   <header id="home" class="hero-section">
     <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div>
-        <p class=" margin 20px font-semibold text-indigo-700 mb-3">Hello, I'm</p>
+      <div class="hero-text">
+        <p class="font-semibold text-indigo-700 mb-3">Hello, I'm</p>
         <h1 class="text-5xl font-extrabold text-gray-900 mb-4">Shabbir J Kholiya</h1>
         <h2 class="text-3xl font-semibold text-gray-700 mb-6">A Passionate <span class="text-indigo-600">Web Developer</span></h2>
         <p class="text-lg text-gray-600 mb-8">
@@ -91,9 +99,8 @@
         </div>
         <!-- Social Links -->
         <div class="social-links mt-6">
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/shabbir-j-kholiya-77000724b" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/shabbirjkholiya" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
       <div class="flex justify-center md:justify-end">

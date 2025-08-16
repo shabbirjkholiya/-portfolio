@@ -23,6 +23,10 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 500px;
     }
     .project-card:hover {
       transform: translateY(-5px);
@@ -35,14 +39,12 @@
       border-bottom: 1px solid #e5e7eb;
       cursor: pointer;
     }
-    .btn-github, .btn-demo {
-      background: #333;
-      color: #fff;
-      transition: all 0.3s;
-    }
-    .btn-github:hover, .btn-demo:hover {
-      background: #000;
-      transform: translateY(-2px) scale(1.02);
+    .project-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
     }
     .modal-img {
       max-width: 100%;
@@ -60,9 +62,18 @@
       color: #777;
       font-size: 1.2rem;
     }
+    .project-link {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 768px) {
       .carousel-item img { height: 180px; }
       .modal-img, .modal-img-error { max-height: 60vh; }
+      .project-card { min-height: 450px; }
     }
   </style>
 </head>
@@ -100,7 +111,6 @@
   <section class="py-16">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
         <!-- Project 1: Electronic E-commerce Platform -->
         <div class="project-card">
           <div id="carouselEcommerce1" class="carousel slide" data-bs-ride="carousel">
@@ -149,13 +159,14 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold text-indigo-700">Electronic E-commerce Platform</h3>
-            <p class="text-gray-600 mt-2">A scalable online platform for electronic products featuring product listings, a shopping cart, secure checkout, and payment integration.</p>
-            <p class="text-gray-600 mt-2">Built with React, Node.js, MongoDB, and Stripe.</p>
-            <a href="https://github.com/shabbirjkholiya/ecommerce" target="_blank" class="btn btn-github mt-3">
-              <i class="fa-brands fa-github"></i> View on GitHub
-            </a>
+          <div class="project-content">
+            <div>
+              <a href="https://github.com/shabbirjkholiya/ecommerce-platform" target="_blank" class="project-link">
+                <h3 class="text-xl font-bold text-indigo-700">Electronic E-commerce Platform</h3>
+              </a>
+              <p class="text-gray-600 mt-2">A scalable e-commerce platform for electronics, featuring product listings, shopping cart, secure checkout, and payment integration. Includes user authentication, product filtering, and order tracking for enhanced user experience.</p>
+              <p class="text-gray-600 mt-2">Built with PHP, MySQL, HTML, CSS, Tailwind CSS, JavaScript.</p>
+            </div>
           </div>
         </div>
 
@@ -192,13 +203,14 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold text-indigo-700">Task Management System</h3>
-            <p class="text-gray-600 mt-2">A robust web application to manage daily tasks, assign deadlines, monitor progress, and increase productivity.</p>
-            <p class="text-gray-600 mt-2">Built with Vue.js, Express.js, and PostgreSQL.</p>
-            <a href="https://github.com/shabbirjkholiya/task-manager" target="_blank" class="btn btn-github mt-3">
-              <i class="fa-brands fa-github"></i> View on GitHub
-            </a>
+          <div class="project-content">
+            <div>
+              <a href="https://github.com/shabbirjkholiya/task-management-system" target="_blank" class="project-link">
+                <h3 class="text-xl font-bold text-indigo-700">Task Management System</h3>
+              </a>
+              <p class="text-gray-600 mt-2">A web application to manage tasks, assign deadlines, and track progress. Features include task creation, status updates, user assignments, and real-time notifications for improved productivity.</p>
+              <p class="text-gray-600 mt-2">Built with Laravel, HTML, CSS, Tailwind CSS, Bootstrap, MySQL.</p>
+            </div>
           </div>
         </div>
 
@@ -241,13 +253,14 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold text-indigo-700">Human Resource Management System (HRMS)</h3>
-            <p class="text-gray-600 mt-2">A web-based solution to manage employee records, track attendance, process leaves, and simplify HR operations.</p>
-            <p class="text-gray-600 mt-2">Built with Angular, Django, and MySQL.</p>
-            <a href="https://github.com/shabbirjkholiya/hrms" target="_blank" class="btn btn-github mt-3">
-              <i class="fa-brands fa-github"></i> View on GitHub
-            </a>
+          <div class="project-content">
+            <div>
+              <a href="https://hrms.ziaat.com" target="_blank" class="project-link">
+                <h3 class="text-xl font-bold text-indigo-700">Human Resource Management System</h3>
+              </a>
+              <p class="text-gray-600 mt-2">A platform for Ziaat Technolab to manage candidates, featuring data storage, advanced filtering by technology and status, and lifecycle tracking for applications, interviews, and follow-ups.</p>
+              <p class="text-gray-600 mt-2">Built with PHP, MySQL, HTML, CSS, Tailwind CSS, JavaScript.</p>
+            </div>
           </div>
         </div>
 
@@ -284,13 +297,14 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold text-indigo-700">Client Management System</h3>
-            <p class="text-gray-600 mt-2">Centralizes client information, manages communications, and keeps track of all interactions with a smooth user interface.</p>
-            <p class="text-gray-600 mt-2">Built with React, Firebase, and Tailwind CSS.</p>
-            <a href="https://github.com/shabbirjkholiya/client-manager" target="_blank" class="btn btn-github mt-3">
-              <i class="fa-brands fa-github"></i> View on GitHub
-            </a>
+          <div class="project-content">
+            <div>
+              <a href="https://crm.ziaat.com" target="_blank" class="project-link">
+                <h3 class="text-xl font-bold text-indigo-700">Client Management System</h3>
+              </a>
+              <p class="text-gray-600 mt-2">A system for Ziaat Technolab to manage client data, with advanced filtering, CSV exports, email integration, and detailed tracking of project timelines, services, and statuses.</p>
+              <p class="text-gray-600 mt-2">Built with PHP, MySQL, HTML, CSS, Tailwind CSS, JavaScript.</p>
+            </div>
           </div>
         </div>
 
@@ -321,21 +335,16 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold text-indigo-700">Simon Says Game & To-Do List</h3>
-            <p class="text-gray-600 mt-2">Two mini-projects: an interactive memory game and a productive to-do list with add, edit, delete, and complete functionalities, showcasing JavaScript logic and user interface skills.</p>
-            <p class="text-gray-600 mt-2">Built with JavaScript, HTML, and Tailwind CSS.</p>
-            <div class="flex space-x-3">
-              <a href="https://github.com/shabbirjkholiya/showcase" target="_blank" class="btn btn-github mt-3">
-                <i class="fa-brands fa-github"></i> View on GitHub
+          <div class="project-content">
+            <div>
+              <a href="https://github.com/shabbirjkholiya/simon-todo" target="_blank" class="project-link">
+                <h3 class="text-xl font-bold text-indigo-700">Simon Says Game & To-Do List</h3>
               </a>
-              <a href="todo.html" target="_blank" class="btn btn-demo mt-3">
-                <i class="fa-solid fa-eye"></i> Live Demo
-              </a>
+              <p class="text-gray-600 mt-2">A memory-based Simon Says game and a to-do list app with add, edit, delete, and complete features, demonstrating JavaScript logic and interactive UI design.</p>
+              <p class="text-gray-600 mt-2">Built with JavaScript, HTML, Tailwind CSS.</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
