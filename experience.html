@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shabbir J Kholiya – Experience</title>
+  <!-- Bootstrap & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; padding-top: 70px; }
+    .navbar-brand i { margin-right: 0.5rem; color: #4f46e5; }
+    .nav-link i { margin-right: 0.4rem; color: #4f46e5; }
+
+    /* Experience Card */
+    .experience-card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border-left: 6px solid #4f46e5;
+      position: relative;
+    }
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .experience-icon {
+      font-size: 2.5rem;
+      color: #4f46e5;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      background: #eef2ff;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h3 { color: #1f2937; }
+    h4 { color: #4f46e5; }
+    p { color: #4b5563; }
+
+    .timeline {
+      border-left: 2px solid #e5e7eb;
+      padding-left: 20px;
+      margin-top: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 6px;
+      height: 12px;
+      width: 12px;
+      background: #4f46e5;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #eef2ff;
+    }
+
+    .btn-primary {
+      background: #4f46e5;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-primary:hover { background: #4338ca; }
+
+    @media (max-width: 768px) {
+      .experience-icon { font-size: 2rem; top: -15px; left: -15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand text-2xl font-bold text-indigo-700" href="index.html">
+        <i class="fa-solid fa-code"></i> Shabbir J Kholiya
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificate.html"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+    <h1 class="text-5xl font-extrabold text-indigo-700 mb-4"><i class="fa-solid fa-briefcase"></i> My Experience</h1>
+    <p class="text-lg text-gray-700">A timeline of my professional journey</p>
+  </header>
+
+  <!-- Experience Section -->
+<!-- Experience Section -->
+<!-- Experience Section -->
+<!-- Experience Section -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="timeline">
+
+      <!-- Experience 1: Ziaat Technolab -->
+      <div class="timeline-item experience-card">
+        <i class="fa-solid fa-building experience-icon"></i>
+        <h3 class="text-2xl font-bold">Backend Development Intern</h3>
+        <h4 class="text-xl font-semibold mb-2">Ziaat Technolab Pvt. Ltd.</h4>
+        <p class="text-gray-600 mb-2"><i class="fa-regular fa-calendar-days"></i> April 2025 – Present (3 Months)</p>
+
+        <h4 class="text-lg font-bold mt-4 text-indigo-700">Key Projects:</h4>
+
+        <!-- Project 1 -->
+        <div class="mt-3">
+          <h5 class="font-semibold text-lg text-gray-800">1. Talimul Islam Madrasa Management App (Client Project)</h5>
+          <p class="text-gray-700 mb-2">
+            A real-world client project for managing daily operations of a madrasa, focusing on digitalizing 
+            student records, attendance, and communication between parents and staff.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li>Developed **38+ RESTful APIs** in Core PHP for login, OTP-based authentication, class scheduling, and attendance tracking.</li>
+            <li>Implemented modules for **parent communication**, real-time notifications, and performance reviews.</li>
+            <li>Created a **fee management system** with **PDF receipt generation** using dynamic data and custom templates.</li>
+            <li>Designed optimized **MySQL database schemas** for managing students, staff, and transactions.</li>
+            <li>Ensured secure data exchange and smooth integration with frontend apps (Android & web).</li>
+            <li>Collaborated with the client to translate real-world requirements into functional backend features.</li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="mt-3">
+          <h5 class="font-semibold text-lg text-gray-800">2. Human Resource Management System (HRMS)</h5>
+          <p class="text-gray-700">
+            Designed and developed an internal HR tool to manage employee records, leave tracking, and payroll data for Ziaat Technolab.
+          </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="mt-3">
+          <h5 class="font-semibold text-lg text-gray-800">3. Client Management System</h5>
+          <p class="text-gray-700">
+            Built a lightweight platform to streamline client information storage, project tracking, and communication logs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience 2: TCS -->
+      <div class="timeline-item experience-card">
+        <i class="fa-solid fa-building experience-icon"></i>
+        <h3 class="text-2xl font-bold">Upcoming Role – Software Engineer</h3>
+        <h4 class="text-xl font-semibold mb-2">Tata Consultancy Services (TCS)</h4>
+        <p class="text-gray-600 mb-2"><i class="fa-regular fa-calendar-days"></i> Joining: Next Month</p>
+        <p class="text-gray-700">
+          Selected for a backend developer role at TCS. Preparing for full-time responsibilities in scalable backend systems and enterprise-level applications.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Want to Connect?</h2>
+      <a href="mailto:shabbirjkholiya@gmail.com" class="btn btn-primary px-8 py-4 text-lg">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

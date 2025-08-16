@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shabbir J Kholiya – Certifications</title>
+  <!-- Bootstrap & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      padding-top: 70px;
+    }
+    .navbar-brand i { margin-right: 0.5rem; color: #4f46e5; }
+    .nav-link i { margin-right: 0.4rem; color: #4f46e5; }
+
+    /* Certificate Card */
+    .cert-card {
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 320px; /* Increased height */
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Image Container */
+    .image-container {
+      flex: 1;
+      overflow-y: auto;
+      border-radius: 0.5rem;
+    }
+    .cert-image {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      display: block;
+    }
+
+    .cert-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #4f46e5;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* Modal Styles */
+    .modal-img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .cert-card { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand text-2xl font-bold text-indigo-700" href="index.html">
+        <i class="fa-solid fa-code"></i> Shabbir J Kholiya
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificate.html"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+    <h1 class="text-5xl font-extrabold text-indigo-700 mb-4"><i class="fa-solid fa-award"></i> Certifications</h1>
+    <p class="text-lg text-gray-700">A showcase of my achievements and credentials</p>
+  </header>
+
+  <!-- Certifications Grid -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+        <!-- Certification Card Example -->
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/cp.jpg"Competitive Programming in C" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">Competitive Programming in C</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/sc.jpg" alt="Cyber Security Awareness" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">Cyber Security Awareness</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/ccc.jpg" alt="CCC Certificate" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">CCC</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/re.jpg" alt="React Zero to Hero" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">React Zero to Hero</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/ibm.jpg" alt="Frontend Internship" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">Frontend Development Internship</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/erp.jpg" alt="Tally ERP 9" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">Tally ERP 9</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/p.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">Social Media Influencer</p>
+        </div>
+         <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/sde.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">SDE OI</p>
+        </div>
+         <div class="cert-card">
+          <div class="image-container">
+            <img src="certificates/SPC.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
+          </div>
+          <p class="cert-title">SPC</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Image Preview -->
+  <div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <img class="modal-img" id="modalImage" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+      <a href="mailto:shabbirjkholiya@gmail.com" class="btn btn-primary bg-indigo-600 text-white px-8 py-4 text-lg">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function openModal(image) {
+      const modalImage = document.getElementById("modalImage");
+      modalImage.src = image.src;
+      const myModal = new bootstrap.Modal(document.getElementById("imageModal"));
+      myModal.show();
+    }
+  </script>
+</body>
+</html>

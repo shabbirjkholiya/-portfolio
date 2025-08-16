@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Shabbir J Kholiya showcasing web development projects like e-commerce platforms, task managers, and more.">
+  <meta name="keywords" content="Shabbir Kholiya, web developer, portfolio, projects, e-commerce, task management">
+  <title>Shabbir J Kholiya – Projects</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; padding-top: 70px; }
+    .navbar-brand i { margin-right: 0.5rem; color: #4f46e5; }
+    .nav-link i { margin-right: 0.4rem; color: #4f46e5; }
+    .project-card {
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid #e5e7eb;
+      cursor: pointer;
+    }
+    .btn-github, .btn-demo {
+      background: #333;
+      color: #fff;
+      transition: all 0.3s;
+    }
+    .btn-github:hover, .btn-demo:hover {
+      background: #000;
+      transform: translateY(-2px) scale(1.02);
+    }
+    .modal-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      margin: auto;
+    }
+    .modal-img-error {
+      max-width: 100%;
+      max-height: 80vh;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      .carousel-item img { height: 180px; }
+      .modal-img, .modal-img-error { max-height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand text-2xl font-bold text-indigo-700" href="index.html">
+        <i class="fa-solid fa-code"></i> Shabbir J Kholiya
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificate.html"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+    <h1 class="text-5xl font-extrabold text-indigo-700 mb-4"><i class="fa-solid fa-diagram-project"></i> My Projects</h1>
+    <p class="text-lg text-gray-700">Discover some of my standout projects, including details and GitHub repositories.</p>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <!-- Project 1: Electronic E-commerce Platform -->
+        <div class="project-card">
+          <div id="carouselEcommerce1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="projects/ec1.png" class="d-block w-100" alt="E-commerce project dashboard screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec2.png" class="d-block w-100" alt="Product page screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec2.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec3.png" class="d-block w-100" alt="Checkout workflow screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec3.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec4.png" class="d-block w-100" alt="E-commerce project dashboard screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec4.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec5.png" class="d-block w-100" alt="Product page screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec5.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec6.png" class="d-block w-100" alt="Checkout workflow screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec6.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec7.png" class="d-block w-100" alt="E-commerce project dashboard screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec7.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec8.png" class="d-block w-100" alt="Product page screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec8.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec9.png" class="d-block w-100" alt="Checkout workflow screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec9.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ec10.png" class="d-block w-100" alt="E-commerce project dashboard screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ec10.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ecommerce2.jpg" class="d-block w-100" alt="Product page screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ecommerce2.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/ecommerce3.jpg" class="d-block w-100" alt="Checkout workflow screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/ecommerce3.jpg">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEcommerce1" data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEcommerce1" data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-indigo-700">Electronic E-commerce Platform</h3>
+            <p class="text-gray-600 mt-2">A scalable online platform for electronic products featuring product listings, a shopping cart, secure checkout, and payment integration.</p>
+            <p class="text-gray-600 mt-2">Built with React, Node.js, MongoDB, and Stripe.</p>
+            <a href="https://github.com/shabbirjkholiya/ecommerce" target="_blank" class="btn btn-github mt-3">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Task Management System -->
+        <div class="project-card">
+          <div id="carouselTask1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="projects/task1.png" class="d-block w-100" alt="Task manager dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task2.png" class="d-block w-100" alt="Add new task screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task2.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task3.png" class="d-block w-100" alt="Task manager dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task3.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task4.png" class="d-block w-100" alt="Add new task screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task4.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task5.png" class="d-block w-100" alt="Task manager dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task5.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task6.png" class="d-block w-100" alt="Add new task screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task6.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/task7.png" class="d-block w-100" alt="Task manager dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/task7.png">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTask1" data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTask1" data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-indigo-700">Task Management System</h3>
+            <p class="text-gray-600 mt-2">A robust web application to manage daily tasks, assign deadlines, monitor progress, and increase productivity.</p>
+            <p class="text-gray-600 mt-2">Built with Vue.js, Express.js, and PostgreSQL.</p>
+            <a href="https://github.com/shabbirjkholiya/task-manager" target="_blank" class="btn btn-github mt-3">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Human Resource Management System -->
+        <div class="project-card">
+          <div id="carouselHRMS1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="projects/hrms1.png" class="d-block w-100" alt="HRMS dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms2.png" class="d-block w-100" alt="Employee management screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms2.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms3.png" class="d-block w-100" alt="HRMS dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms3.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms4.png" class="d-block w-100" alt="Employee management screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms4.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms5.png" class="d-block w-100" alt="HRMS dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms5.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms6.png" class="d-block w-100" alt="Employee management screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms6.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms7.png" class="d-block w-100" alt="Employee management screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms7.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms8.png" class="d-block w-100" alt="HRMS dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms8.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/hrms9.png" class="d-block w-100" alt="Employee management screen" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/hrms9.png">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHRMS1" data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHRMS1" data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-indigo-700">Human Resource Management System (HRMS)</h3>
+            <p class="text-gray-600 mt-2">A web-based solution to manage employee records, track attendance, process leaves, and simplify HR operations.</p>
+            <p class="text-gray-600 mt-2">Built with Angular, Django, and MySQL.</p>
+            <a href="https://github.com/shabbirjkholiya/hrms" target="_blank" class="btn btn-github mt-3">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Client Management System -->
+        <div class="project-card">
+          <div id="carouselClient1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="projects/client1.png" class="d-block w-100" alt="Client management system dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client2.png" class="d-block w-100" alt="Client detail page" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client2.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client3.png" class="d-block w-100" alt="Client management system dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client3.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client4.png" class="d-block w-100" alt="Client detail page" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client4.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client5.png" class="d-block w-100" alt="Client management system dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client5.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client6.png" class="d-block w-100" alt="Client detail page" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client6.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/client7.png" class="d-block w-100" alt="Client management system dashboard" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/client7.png">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselClient1" data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselClient1" data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-indigo-700">Client Management System</h3>
+            <p class="text-gray-600 mt-2">Centralizes client information, manages communications, and keeps track of all interactions with a smooth user interface.</p>
+            <p class="text-gray-600 mt-2">Built with React, Firebase, and Tailwind CSS.</p>
+            <a href="https://github.com/shabbirjkholiya/client-manager" target="_blank" class="btn btn-github mt-3">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: Simon Says Game & To-Do List -->
+        <div class="project-card">
+          <div id="carouselSimonTodo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="projects/simon1.png" class="d-block w-100" alt="Simon Says game screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/simon1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/todo1.png" class="d-block w-100" alt="To-Do List app screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/todo1.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/todo2.png" class="d-block w-100" alt="To-Do List app screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/todo2.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/todo3.png" class="d-block w-100" alt="To-Do List app screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/todo3.png">
+              </div>
+              <div class="carousel-item">
+                <img src="projects/todo4.png" class="d-block w-100" alt="To-Do List app screenshot" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="projects/todo4.png">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSimonTodo" data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSimonTodo" data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-indigo-700">Simon Says Game & To-Do List</h3>
+            <p class="text-gray-600 mt-2">Two mini-projects: an interactive memory game and a productive to-do list with add, edit, delete, and complete functionalities, showcasing JavaScript logic and user interface skills.</p>
+            <p class="text-gray-600 mt-2">Built with JavaScript, HTML, and Tailwind CSS.</p>
+            <div class="flex space-x-3">
+              <a href="https://github.com/shabbirjkholiya/showcase" target="_blank" class="btn btn-github mt-3">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+              <a href="todo.html" target="_blank" class="btn btn-demo mt-3">
+                <i class="fa-solid fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Want to Collaborate?</h2>
+      <a href="mailto:shabbirjkholiya@gmail.com" class="btn btn-primary bg-indigo-600 text-white px-8 py-4 text-lg">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Project Screenshot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" class="modal-img" id="modalImage" alt="Full-size project screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript for Modal Image -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const imageModal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+
+      imageModal.addEventListener('show.bs.modal', function (event) {
+        const img = event.relatedTarget;
+        const imgSrc = img.getAttribute('data-img-src');
+        modalImg.src = ''; // Clear previous image
+        modalImg.classList.remove('modal-img-error');
+        modalImg.alt = img.alt;
+        modalImg.src = imgSrc; // Set new image source
+      });
+
+      modalImg.addEventListener('error', function () {
+        modalImg.src = '';
+        modalImg.classList.add('modal-img-error');
+        modalImg.alt = 'Image failed to load';
+        const existingErrorMsg = modalImg.parentElement.querySelector('p.text-danger');
+        if (!existingErrorMsg) {
+          modalImg.insertAdjacentHTML('afterend', '<p class="text-danger">Unable to load image. Please check the file path.</p>');
+        }
+      });
+
+      imageModal.addEventListener('hidden.bs.modal', function () {
+        const errorMsg = modalImg.parentElement.querySelector('p.text-danger');
+        if (errorMsg) errorMsg.remove();
+        modalImg.src = ''; // Reset image source
+      });
+    });
+  </script>
+</body>
+</html>
