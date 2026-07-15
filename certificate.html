@@ -25,7 +25,7 @@
       border-radius: 0.75rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 320px; /* Increased height */
+      height: 320px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -36,8 +36,6 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-
-    /* Image Container */
     .image-container {
       flex: 1;
       overflow-y: auto;
@@ -49,7 +47,6 @@
       border-radius: 0.5rem;
       display: block;
     }
-
     .cert-title {
       font-size: 1.2rem;
       font-weight: 600;
@@ -57,14 +54,11 @@
       margin-top: 8px;
       text-align: center;
     }
-
-    /* Modal Styles */
     .modal-img {
       width: 100%;
       height: auto;
       border-radius: 0.5rem;
     }
-
     @media (max-width: 768px) {
       .cert-card { height: 260px; }
     }
@@ -106,141 +100,20 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
 
-        <!-- Certification Card Example -->
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/cp.jpg"Competitive Programming in C" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">Competitive Programming in C</p>
-        </div>
+        <!-- Certification Cards -->
+        <div class="cert-card"><div class="image-container"><img src="certificates/cp.jpg" alt="Competitive Programming in C" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Competitive Programming in C</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/sc.jpg" alt="Cyber Security Awareness" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Cyber Security Awareness</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/ccc.jpg" alt="CCC Certificate" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">CCC</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/re.jpg" alt="React Zero to Hero" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">React Zero to Hero</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/ibm.jpg" alt="Frontend Internship" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Frontend Development Internship</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/erp.jpg" alt="Tally ERP 9" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Tally ERP 9</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/p.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Social Media Influencer</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/sde.jpg" alt="SDE OI" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">SDE OI</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/SPC.jpg" alt="SPC" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">SPC</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/zi.jpg" alt="Internship at Ziaat" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">Internship at Ziaat</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/ctc.jpg" alt="CyberTech Quiz" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">CyberTech Quiz</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/pyp.jpg" alt="Python Programming Competition" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">State Level Python Programming</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/sit.jpg" alt="IT Quiz Competition" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">State Level IT Quiz Competition</p></div>
+        <div class="cert-card"><div class="image-container"><img src="certificates/thirdrank.jpg" alt="CyberTech Challenge" class="cert-image" onclick="openModal(this)"></div><p class="cert-title">CyberTech Challenge (3rd Rank)</p></div>
 
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/sc.jpg" alt="Cyber Security Awareness" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">Cyber Security Awareness</p>
-        </div>
-
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/ccc.jpg" alt="CCC Certificate" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">CCC</p>
-        </div>
-
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/re.jpg" alt="React Zero to Hero" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">React Zero to Hero</p>
-        </div>
-
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/ibm.jpg" alt="Frontend Internship" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">Frontend Development Internship</p>
-        </div>
-
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/erp.jpg" alt="Tally ERP 9" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">Tally ERP 9</p>
-        </div>
-
-        <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/p.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">Social Media Influencer</p>
-        </div>
-         <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/sde.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">SDE OI</p>
-        </div>
-         <div class="cert-card">
-          <div class="image-container">
-            <img src="certificates/SPC.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-          </div>
-          <p class="cert-title">SPC</p>
-        </div>
-<div class="cert-card">
-  <div class="image-container">
-    <img src="certificates/zi.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-  </div>
-  <p class="cert-title">Internship at Ziaat</p>
-</div>
-
-
-<div class="cert-card">
-  <div class="image-container">
-    <img src="certificates/ctc.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-  </div>
-  <p class="cert-title">CyberTech Quize</p>
-</div>
-
-
-<div class="cert-card">
-  <div class="image-container">
-    <img src="certificates/pyp.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-  </div>
-  <p class="cert-title"> State level competitive python programming</p>
-</div>
-
-
-<div class="cert-card">
-  <div class="image-container">
-    <img src="certificates/sit.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-  </div>
-  <p class="cert-title">State level IT Quize Competition</p>
-</div>
-
-
-<div class="cert-card">
-  <div class="image-container">
-    <img src="certificates/thirdrank.jpg" alt="Social Media Influencer" class="cert-image" onclick="openModal(this)">
-  </div>
-  <p class="cert-title">CyberTech Challenges</p>
-</div>
-
-
-        
-
-        
-        
       </div>
-    </div>
-  </section>
-
-  <!-- Modal for Image Preview -->
-  <div class="modal fade" id="imageModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-transparent border-0">
-        <img class="modal-img" id="modalImage" src="" alt="">
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
-      <a href="mailto:shabbirjkholiya@gmail.com" class="btn btn-primary bg-indigo-600 text-white px-8 py-4 text-lg">Email Me</a>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function openModal(image) {
-      const modalImage = document.getElementById("modalImage");
-      modalImage.src = image.src;
-      const myModal = new bootstrap.Modal(document.getElementById("imageModal"));
-      myModal.show();
-    }
-  </script>
-</body>
-</html>
